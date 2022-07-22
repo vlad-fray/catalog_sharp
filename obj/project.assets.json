@@ -213,11 +213,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/user/Desktop/Projects/C_Sharp/Catalog/Catalog.csproj",
+      "projectUniqueName": "/home/user/Desktop/Projects/C_Sharp/CatalogGit/Catalog.csproj",
       "projectName": "Catalog",
-      "projectPath": "/home/user/Desktop/Projects/C_Sharp/Catalog/Catalog.csproj",
+      "projectPath": "/home/user/Desktop/Projects/C_Sharp/CatalogGit/Catalog.csproj",
       "packagesPath": "/home/user/.nuget/packages/",
-      "outputPath": "/home/user/Desktop/Projects/C_Sharp/Catalog/obj/",
+      "outputPath": "/home/user/Desktop/Projects/C_Sharp/CatalogGit/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/user/.nuget/NuGet/NuGet.Config"
