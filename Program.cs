@@ -11,7 +11,9 @@ BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => {
+    options.SuppressAsyncSuffixInActionNames = false;
+});
 builder.Services.AddSingleton<IMongoClient>(ServiceProvider => 
 {
     var settings = builder.Configuration.GetSection(nameof(MongoDBSettings)).Get<MongoDBSettings>();
