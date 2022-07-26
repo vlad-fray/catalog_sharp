@@ -68,3 +68,6 @@
 /home/user/Desktop/Projects/C_Sharp/CatalogGit/bin/Debug/net6.0/runtimes/linux/native/libmongocrypt.so
 /home/user/Desktop/Projects/C_Sharp/CatalogGit/bin/Debug/net6.0/runtimes/osx/native/libmongocrypt.dylib
 /home/user/Desktop/Projects/C_Sharp/CatalogGit/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll
+/home/user/Desktop/Projects/C_Sharp/CatalogGit/bin/Debug/net6.0/HealthChecks.MongoDb.dll
+/home/user/Desktop/Projects/C_Sharp/CatalogGit/bin/Debug/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll
+/home/user/Desktop/Projects/C_Sharp/CatalogGit/bin/Debug/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
