@@ -38,15 +38,19 @@ builder.Services.AddHealthChecks()
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseAuthorization();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseHttpsRedirection();
 }
 
-app.UseAuthorization();
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment())
+{
+}
 
 app.MapControllers();
 
