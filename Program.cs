@@ -16,11 +16,12 @@ BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String))
 // Add services to the container.
 
 var mongoDbSettings = builder.Configuration.GetSection(nameof(MongoDBSettings)).Get<MongoDBSettings>();
-builder.Services.AddSingleton<IMongoClient>(ServiceProvider => 
+builder.Services.AddSingleton<IMongoClient>(ServiceProvider =>
 {
     return new MongoClient(mongoDbSettings.ConnectionString);
 });
-builder.Services.AddControllers(options => {
+builder.Services.AddControllers(options =>
+{
     options.SuppressAsyncSuffixInActionNames = false;
 });
 builder.Services.AddSingleton<IItemsRepository, MongoDBItemsRepository>();
@@ -29,8 +30,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks()
     .AddMongoDb(
-        mongoDbSettings.ConnectionString, 
-        name: "mongodb", 
+        mongoDbSettings.ConnectionString,
+        name: "mongodb",
         timeout: TimeSpan.FromSeconds(10),
         tags: new[] { "ready" }
     );
@@ -58,7 +59,7 @@ app.MapHealthChecks("/health/ready", new HealthCheckOptions
 {
     Predicate = (check) => check.Tags.Contains("ready"),
     // Кастомизация ответа на хелфчек
-    ResponseWriter = async(context, report) => 
+    ResponseWriter = async (context, report) =>
     {
         var result = JsonSerializer.Serialize(new
         {

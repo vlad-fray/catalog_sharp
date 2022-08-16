@@ -5,7 +5,7 @@ namespace Catalog.DTOs
     public record UpdateItemDto
     {
         [Required]
-        public string Name { get; init; }
+        public string? Name { get; init; }
 
         [Required]
         [Range(1, 1000)]

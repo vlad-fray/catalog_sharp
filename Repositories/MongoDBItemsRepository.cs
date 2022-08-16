@@ -27,7 +27,7 @@ namespace Catalog.Repositories
             await itemsCollection.DeleteOneAsync(filter);
         }
 
-        public async Task<Item>? GetItemAsync(Guid id)
+        public async Task<Item?> GetItemAsync(Guid id)
         {
             var filter = filterBuilder.Eq(item => item.Id, id);
             return await itemsCollection.Find(filter).SingleOrDefaultAsync();
